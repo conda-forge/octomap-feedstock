@@ -1,5 +1,5 @@
 {% set name = "octomap" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/OctoMap/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 5f81c9a8cbc9526b2e725251cd3a829e5222a28201b394314002146d8b9214dd
+  sha256: 016adef525e5df0fa0ef927192cdca8144b86ba2f6d0e18d529b95d404b76b27
   patches:
     # Compatibility with C++17
     - byte.patch
