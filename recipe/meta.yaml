@@ -10,8 +10,7 @@ source:
   sha256: 8488de97ed2c8f4757bfbaf3225e82a9e36783dce1f573b3bde1cf968aa89696
   patches:
     # Compatibility with C++17
-    - byte.patch
-    - fix-exported-targets.patch  # [win]
+  - fix-exported-targets.patch  # [win]
 
 build:
   number: 0
