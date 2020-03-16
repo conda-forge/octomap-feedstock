@@ -1,5 +1,5 @@
 {% set name = "octomap" %}
-{% set version = "1.9.3" %}
+{% set version = "1.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/OctoMap/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 8488de97ed2c8f4757bfbaf3225e82a9e36783dce1f573b3bde1cf968aa89696
+  sha256: b4eb0f9a0fbcde17bb80ba855e485cfe8349f63dbd7f4700f458971932536aaa
   patches:
     # Compatibility with C++17
     - byte.patch
@@ -43,7 +43,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: octomap/LICENSE.txt
-  summary: 'An Efficient Probabilistic 3D Mapping Framework Based on Octrees'
+  summary: An Efficient Probabilistic 3D Mapping Framework Based on Octrees
   dev_url: https://github.com/OctoMap/octomap
 
 extra:
