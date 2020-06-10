@@ -12,6 +12,7 @@ source:
     # Compatibility with C++17
     - byte.patch
     - fix-exported-targets.patch  # [win]
+    - cmake-fix-linkage.patch  # [win]
 
 build:
   number: 1
