@@ -5,11 +5,11 @@ Home: https://github.com/OctoMap/octomap
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/octomap-feedstock/blob/master/LICENSE.txt)
 
 Summary: An Efficient Probabilistic 3D Mapping Framework Based on Octrees
 
-
+Development: https://github.com/OctoMap/octomap
 
 Current build status
 ====================
