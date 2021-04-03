@@ -10,9 +10,8 @@ source:
   sha256: 0f88c1c024f0d29ab74c7fb9f6ebfdddc8be725087372c6c4d8878be95831eb6
   patches:
     # Compatibility with C++17
-    - byte.patch
     - fix-exported-targets.patch  # [win]
-    - cmake-fix-linkage.patch  # [win]
+    - cmake-fix-linkage.patch     # [win]
 
 build:
   number: 0
