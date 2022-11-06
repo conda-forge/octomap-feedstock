@@ -9,12 +9,13 @@ source:
   url: https://github.com/OctoMap/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 417af6da4e855e9a83b93458aa98b01a2c88f880088baad2b59d323ce162586e
   patches:
-    - 001-fix-exported-targets.patch
+    - 001-fix-exported-targets.patch  # [win]
 
 build:
   number: 0
   run_exports:
-    - {{ pin_subpackage(name, max_pin='x.x') }}
+    # Only static libraries are built on Windows
+    - {{ pin_subpackage(name, max_pin='x.x') }}  # [not win]
 
 
 requirements:
