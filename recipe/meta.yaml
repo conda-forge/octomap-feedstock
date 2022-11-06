@@ -9,16 +9,12 @@ source:
   url: https://github.com/OctoMap/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 417af6da4e855e9a83b93458aa98b01a2c88f880088baad2b59d323ce162586e
   patches:
-    # Compatibility with C++17
-    - fix-exported-targets.patch  # [win]
-    - cmake-fix-linkage.patch     # [win]
+    - 001-fix-exported-targets.patch
 
 build:
   number: 0
-  skip: true  # [win and vc<14]
   run_exports:
-    # Only static libraries are built on Windows
-    - {{ pin_subpackage(name, max_pin='x.x') }}  # [not win]
+    - {{ pin_subpackage(name, max_pin='x.x') }}
 
 
 requirements:
