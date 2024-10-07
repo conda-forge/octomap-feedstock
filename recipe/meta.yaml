@@ -10,6 +10,7 @@ source:
   sha256: 8da2576ec6a0993e8900db7f91083be8682d8397a7be0752c85d1b7dd1b8e992
   patches:
     - 001-fix-exported-targets.patch
+    - 002-fix-isnan.patch
 
 build:
   number: 0
