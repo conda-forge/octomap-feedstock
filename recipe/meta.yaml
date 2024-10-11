@@ -45,5 +45,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - jeongseok-meta
     - jcarpent
     - wolfv
