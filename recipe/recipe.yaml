@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: octomap
-  version: "1.10.1"
+  version: "2.0.0"
 
 package:
   name: ${{ name }}
@@ -10,13 +10,13 @@ package:
 
 source:
   url: https://github.com/OctoMap/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: b6b6c10c99ab15701dd105840e7d4cf18e226eb68714dd4bdfe049dede5cd489
+  sha256: a47231ec8b7cca3147e611caf31a100dfc24a2257dcc58cff1a047519586befa
   patches:
     - 001-fix-exported-targets.patch
     - 002-fix-isnan.patch
 
 build:
-  number: 1
+  number: 0
   script:
     - if: unix
       then: bash "${RECIPE_DIR}/build.sh"
