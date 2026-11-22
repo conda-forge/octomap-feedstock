@@ -1,11 +1,8 @@
 mkdir build
 cd build
 
-REM OctoMap 1.10 predates CMake 4; remove after a release containing
-REM https://github.com/OctoMap/octomap/commit/79cd7fddd3d0b7448e2a1ee0524ca89b292485d3
 cmake .. ^
 	  -G "NMake Makefiles" ^
-      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^

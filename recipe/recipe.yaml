@@ -11,9 +11,6 @@ package:
 source:
   url: https://github.com/OctoMap/${{ name }}/archive/v${{ version }}.tar.gz
   sha256: a47231ec8b7cca3147e611caf31a100dfc24a2257dcc58cff1a047519586befa
-  patches:
-    - 001-fix-exported-targets.patch
-    - 002-fix-isnan.patch
 
 build:
   number: 0
