@@ -1,0 +1,12 @@
+diff --git a/octomap/include/octomap/OcTreeBaseImpl.hxx b/octomap/include/octomap/OcTreeBaseImpl.hxx
+index 15d4bfc..f371398 100644
+--- a/octomap/include/octomap/OcTreeBaseImpl.hxx
++++ b/octomap/include/octomap/OcTreeBaseImpl.hxx
+@@ -528,6 +528,7 @@ namespace octomap {
+             root->children = NULL;
+         }
+         this->tree_size = 0;
++        delete this->root;
+         this->root = NULL;
+         // max extent of tree changed:
+         this->size_changed = true;
