@@ -11,9 +11,16 @@ package:
 source:
   url: https://github.com/OctoMap/${{ name }}/archive/v${{ version }}.tar.gz
   sha256: a47231ec8b7cca3147e611caf31a100dfc24a2257dcc58cff1a047519586befa
+  patches:
+    # Free the root node when deleteNode() removes the last node (#27);
+    # remove once an OctoMap release includes https://github.com/OctoMap/octomap/pull/450
+    - 0001-free-the-root-node-in-deleteNode.patch
+    # Restore the ament index marker for ROS 2 that 2.0.0 stopped installing (#27);
+    # remove once an OctoMap release includes https://github.com/OctoMap/octomap/pull/451
+    - 0002-restore-the-ament-index-marker.patch
 
 build:
-  number: 0
+  number: 1
   script:
     - if: unix
       then: bash "${RECIPE_DIR}/build.sh"
@@ -31,6 +38,11 @@ requirements:
     - ${{ pin_subpackage("octomap", upper_bound="x.x") }}
 
 tests:
+  - package_contents:
+      files:
+        - if: win
+          then: Library/share/ament_index/resource_index/packages/octomap
+          else: share/ament_index/resource_index/packages/octomap
   - files:
       recipe:
         - tests/
