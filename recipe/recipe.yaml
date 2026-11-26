@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: octomap
-  version: "2.0.0"
+  version: "2.0.1"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/OctoMap/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: a47231ec8b7cca3147e611caf31a100dfc24a2257dcc58cff1a047519586befa
+  sha256: b3bbadf9ee9f05792d08f626dd0e784489fdad662eb2fbf311683241706bf60f
   patches:
     # Free the root node when deleteNode() removes the last node (#27);
     # remove once an OctoMap release includes https://github.com/OctoMap/octomap/pull/450
@@ -20,7 +20,7 @@ source:
     - 0002-restore-the-ament-index-marker.patch
 
 build:
-  number: 1
+  number: 0
   script:
     - if: unix
       then: bash "${RECIPE_DIR}/build.sh"
